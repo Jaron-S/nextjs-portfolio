@@ -209,8 +209,8 @@ const projects = () => {
               <FeaturedProject
                 title="Full-Stack Social Media App"
                 summary="This project harnesses the power of React and Redux to ensure state management efficiency, complemented by Tailwind CSS for a polished design. The backend leverages Express and MongoDB, with the added functionality of an integrated image storage system."
-                link="/"
-                github="https://github.com"
+                link="https://linkup-js.netlify.app/"
+                github="https://github.com/Jaron-S/social-media-app-client"
                 type="Featured Project"
                 tools={[
                   {
