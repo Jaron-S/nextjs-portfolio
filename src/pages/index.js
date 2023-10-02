@@ -46,7 +46,7 @@ export default function Home({ toggleContact }) {
               </p>
               <div className="flex items-center self-start mt-2">
                 <Link
-                  href="/dummy.pdf"
+                  href="/Resume.pdf"
                   target={"_blank"}
                   className="flex items-center md:p-2 md:px-4 md:text-base bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                   download={true}
