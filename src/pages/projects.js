@@ -210,7 +210,7 @@ const projects = () => {
                 title="Full-Stack Social Media App"
                 summary="This project harnesses the power of React and Redux to ensure state management efficiency, complemented by Tailwind CSS for a polished design. The backend leverages Express and MongoDB, with the added functionality of an integrated image storage system."
                 link="https://linkup-js.netlify.app/"
-                github="https://github.com/Jaron-S/social-media-app-client"
+                github="https://github.com/Jaron-S/LinkUp"
                 type="Featured Project"
                 tools={[
                   {
@@ -242,8 +242,8 @@ const projects = () => {
               <FeaturedProject
                 title="Car Search App"
                 summary="Utilizing Next.js for efficiency and TypeScript for type-safety, this car search app offers a straightforward user experience. The use of two distinct APIs ensures consistent data retrieval and image display, while Tailwind provides a neat visual layout."
-                link="/"
-                github="https://github.com"
+                link="https://car-showcase-js.netlify.app/"
+                github="https://github.com/Jaron-S/car-showcase"
                 type="Featured Project"
                 tools={[
                   { name: "NextJS", icon: <NextJsIcon /> },
@@ -261,8 +261,8 @@ const projects = () => {
               project1={
                 <Project
                   title="NextJS Portfolio Website"
-                  link="/"
-                  github="https://github.com"
+                  link="https://jaron-s.netlify.app/"
+                  github="https://github.com/Jaron-S/nextjs-portfolio"
                   type="This Website!"
                   tools={[
                     { name: "NextJS", icon: <NextJsIcon /> },
