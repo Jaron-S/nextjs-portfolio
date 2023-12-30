@@ -16,13 +16,13 @@ import {
   StrapiIcon,
   TailwindIcon,
   TsIcon,
+  FirebaseIcon,
 } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import image1 from "../../public/images/projects/link-up.webp";
 import image2 from "../../public/images/projects/portfolio.webp";
 import image3 from "../../public/images/projects/ecommerce.webp";
 import image4 from "../../public/images/projects/car-showcase.webp";
-import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -83,9 +83,11 @@ const FeaturedProject = ({
             {summary}
           </p>
           <div className="mt-2 flex items-center">
-            <Link href={github} target="_blank" className="w-10">
-              <GithubIcon />
-            </Link>
+            {github && (
+              <Link href={github} target="_blank" className="w-10">
+                <GithubIcon />
+              </Link>
+            )}
             <Link
               href={link}
               target="_blank"
@@ -207,6 +209,26 @@ const projects = () => {
             {/* Project 1 */}
             <div className="col-span-12">
               <FeaturedProject
+                title="Life OS"
+                summary="This life & goal management app allows users to track their progress toward their ideal identity. PWA compatibility gives users the ability to download the web app for improved performance and offline usage."
+                link="https://life-os.netlify.app/"
+                type="Featured Project"
+                tools={[
+                  { name: "NextJS", icon: <NextJsIcon /> },
+                  {
+                    name: "Tailwind",
+                    icon: <TailwindIcon className={"w-5 pl-1 mr-1"} />,
+                  },
+                  { name: "Typescript", icon: <TsIcon className={"ml-0"} /> },
+                  { name: "Firebase", icon: <FirebaseIcon /> },
+                  { name: "Stripe", icon: <></> },
+                ]}
+                image={image4}
+              />
+            </div>
+            {/* Project 2 */}
+            <div className="col-span-12">
+              <FeaturedProject
                 title="Full-Stack Social Media App"
                 summary="This project harnesses the power of React and Redux to ensure state management efficiency, complemented by Tailwind CSS for a polished design. The backend leverages Express and MongoDB, with the added functionality of an integrated image storage system."
                 link="https://linkup-js.netlify.app/"
@@ -237,33 +259,15 @@ const projects = () => {
                 image={image1}
               />
             </div>
-            {/* Project 2 */}
-            <div className="col-span-12">
-              <FeaturedProject
-                title="Car Search App"
-                summary="Utilizing Next.js for efficiency and TypeScript for type-safety, this car search app offers a straightforward user experience. The use of two distinct APIs ensures consistent data retrieval and image display, while Tailwind provides a neat visual layout."
-                link="https://car-showcase-js.netlify.app/"
-                github="https://github.com/Jaron-S/car-showcase"
-                type="Featured Project"
-                tools={[
-                  { name: "NextJS", icon: <NextJsIcon /> },
-                  {
-                    name: "Tailwind",
-                    icon: <TailwindIcon className={"w-5 pl-1 mr-1"} />,
-                  },
-                  { name: "Typescript", icon: <TsIcon className={"ml-0"} /> },
-                ]}
-                image={image4}
-              />
-            </div>
+
             {/* Project 3 + 4 */}
             <ProjectDuo
               project1={
                 <Project
-                  title="NextJS Portfolio Website"
-                  link="https://jaron-s.netlify.app/"
-                  github="https://github.com/Jaron-S/nextjs-portfolio"
-                  type="This Website!"
+                  title="Workout Planner"
+                  link="https://workout-balancer.netlify.app/"
+                  github="https://github.com/Jaron-S/workout-planner"
+                  type="NextJS Web App"
                   tools={[
                     { name: "NextJS", icon: <NextJsIcon /> },
                     {

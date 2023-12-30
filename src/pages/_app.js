@@ -29,18 +29,14 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <main
         className={`${montserrat.variable} font-sans bg-light dark:bg-dark flex flex-col w-full overflow-hidden`}
       >
         <NavBar />
 
-          <Component
-
-            toggleContact={toggleContact}
-            {...pageProps}
-          />
+        <Component toggleContact={toggleContact} {...pageProps} />
         <Footer />
         <ContactMe isOpen={isContactOpen} toggleContact={toggleContact} />
       </main>
