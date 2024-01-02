@@ -18,7 +18,12 @@ export const CustomLink = ({ href, title, className = "" }) => {
   );
 };
 
-export const CustomMobileLink = ({ href, title, className = "", toggleMenu }) => {
+export const CustomMobileLink = ({
+  href,
+  title,
+  className = "",
+  toggleMenu,
+}) => {
   const router = useRouter();
 
   const handleClick = () => {

@@ -5,11 +5,11 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 import Logo from "./Logo";
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons";
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "../../assets/Icons";
 import { CustomLink, CustomMobileLink } from "./CustomLink";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import useThemeSwitcher from "../hooks/useThemeSwitcher";
 
-import TransitionEffect from "./TransitionEffect";
+import TransitionEffect from "../global/TransitionEffect";
 
 const NavBar = () => {
   const [theme, setTheme] = useThemeSwitcher();
@@ -84,7 +84,7 @@ const MobileNavbar = ({
   const navbarRef = useRef(null);
 
   const handleClickOutside = (event) => {
-    if (event.target.id.startsWith("menuButton")) {
+    if (event.target.id?.startsWith("menuButton")) {
       console.log("Do nothing");
       return; // Do nothing when the close button is clicked
     } else if (navbarRef.current && !navbarRef.current.contains(event.target)) {

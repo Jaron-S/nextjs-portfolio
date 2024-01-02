@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import devIcon from "../../public/images/svgs/website-codes.svg";
-import Layout from "./Layout";
+import devIcon from "/public/images/svgs/website-codes.svg";
+import Layout from "../global/Layout";
 
 const GradientAnimation = (children) => {
   return (
@@ -41,7 +41,7 @@ const GradientAnimation = (children) => {
   );
 };
 
-const Footer = () => {
+const Footer = ({ setIsContactOpen }) => {
   return (
     <footer className="w-full border-t-2 border-solid border-dark dark:text-light dark:border-light font-medium text-lg sm:text-base">
       <Layout className="!py-8 !mt-0 flex items-center justify-between lg:flex-col lg:py-6 lg:text-center">
@@ -60,9 +60,12 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <Link className="w-1/3 flex justify-center" href="/contact">
+        <button
+          className="w-1/3 flex justify-center"
+          onClick={() => setIsContactOpen(true)}
+        >
           Say Hello {"\u{1F44B}\u{1F3FB}"}
-        </Link>
+        </button>
       </Layout>
     </footer>
   );

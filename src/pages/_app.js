@@ -2,13 +2,10 @@ import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 
-import ContactMe from "@/components/ContactMe";
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import ContactMe from "@/components/contact/ContactMe";
+import Footer from "@/components/footer/Footer";
+import NavBar from "@/components/navbar/NavBar";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import { useRouter } from "next/router";
-import useThemeSwitcher from "@/components/hooks/useThemeSwitcher";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,13 +14,7 @@ const montserrat = Montserrat({
 });
 
 export default function App({ Component, pageProps }) {
-  const [mode, setMode] = useThemeSwitcher();
-  const router = useRouter();
   const [isContactOpen, setIsContactOpen] = useState(false);
-
-  const toggleContact = () => {
-    setIsContactOpen(!isContactOpen);
-  };
 
   return (
     <>
@@ -35,10 +26,9 @@ export default function App({ Component, pageProps }) {
         className={`${montserrat.variable} font-sans bg-light dark:bg-dark flex flex-col w-full overflow-hidden`}
       >
         <NavBar />
-
-        <Component toggleContact={toggleContact} {...pageProps} />
-        <Footer />
-        <ContactMe isOpen={isContactOpen} toggleContact={toggleContact} />
+        <Component setIsContactOpen={setIsContactOpen} {...pageProps} />
+        <Footer setIsContactOpen={setIsContactOpen} />
+        <ContactMe isOpen={isContactOpen} setIsContactOpen={setIsContactOpen} />
       </main>
     </>
   );

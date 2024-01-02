@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CircularText } from "./Icons";
+import { CircularText } from "@/assets/Icons";
 
 const HireMe = () => {
   return (

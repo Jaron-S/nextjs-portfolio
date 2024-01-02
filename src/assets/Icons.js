@@ -1,6 +1,3 @@
-import Image from "next/image";
-import express from "../../public/images/icons/express.png";
-
 export const GithubIcon = ({ className, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -664,7 +661,7 @@ export const TsIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-5 h-auto mr-2 -ml-2 ${className}`}
+    className={`w-5 h-full mr-2 -ml-2 ${className}`}
     {...props}
   >
     <rect fill="#3178c6" height="512" rx="50" width="512" />
@@ -813,6 +810,24 @@ export const StrapiIcon = ({ className, ...props }) => (
     <path
       d="M212 285H113.828C112.046 285 111.154 282.846 112.414 281.586L212 182V285Z"
       fill="#9593FF"
+    />
+  </svg>
+);
+export const StripeIcon = ({ className, ...props }) => (
+  <svg
+    width="600"
+    height="600"
+    viewBox="0 0 600 600"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid meet"
+    className={`w-8 h-full -ml-2 -mr-1 -mb-2 ${className}`}
+    {...props}
+  >
+    <path fill="#635bff" d="M0 0h400v400H0z" />
+    <path
+      d="M184.4 155.5c0-9.4 7.7-13.1 20.5-13.1 18.4 0 41.6 5.6 60 15.5v-56.8C244.8 93.1 225 90 205 90c-49.1 0-81.7 25.6-81.7 68.4 0 66.7 91.9 56.1 91.9 84.9 0 11.1-9.7 14.7-23.2 14.7-20.1 0-45.7-8.2-66-19.3v57.5c22.5 9.7 45.2 13.8 66 13.8 50.3 0 84.9-24.9 84.9-68.2-.4-72-92.5-59.2-92.5-86.3z"
+      fill="#ffffff"
     />
   </svg>
 );

@@ -15,7 +15,7 @@ import {
   TsIcon,
   UiIcon,
   WebDevIcon,
-} from "./Icons";
+} from "../../assets/Icons";
 import { useWindowSize } from "@uidotdev/usehooks";
 
 const Skill = ({ name, x, y, icon, dragConstraints }) => {
@@ -43,6 +43,24 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
       bottom: dragConstraints.bottom - yPixel,
     });
   }, [x, y, dragConstraints, size]);
+
+  // reload page on resize, since animation breaks dragConstraints
+  useEffect(() => {
+    let resizeTimeout;
+
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        window.location.reload();
+      }, 100);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimeout);
+    };
+  }, []);
 
   return (
     constraints && (
@@ -117,7 +135,6 @@ const Skills = () => {
               damping: 20,
             }}
           >
-            {" "}
             {<WebDevIcon />}
             Web & Mobile
           </motion.div>
