@@ -85,7 +85,7 @@ const ProjectsGrid = () => {
       <ProjectDuo
         project1={
           <Project
-            title="Workout Planner"
+            title="Full-Stack Workout Planner"
             link="https://workout-balancer.netlify.app/"
             github="https://github.com/Jaron-S/workout-planner"
             type="NextJS Web App"
