@@ -1,5 +1,5 @@
 import { motion, useDragControls } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   CssIcon,
@@ -22,6 +22,10 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
   const dragControls = useDragControls();
   const size = useWindowSize();
   const [constraints, setConstraints] = useState(null);
+
+  const isMobile = useMemo(() => {
+    return size.width < 550;
+  });
 
   const vwToPixel = (vw) => {
     return (parseFloat(vw) / 100) * window.innerWidth;
@@ -59,8 +63,10 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
           key={JSON.stringify(size)}
           className="flex flex-center items-center justify-start rounded-full font-semibold bg-dark text-light dark:bg-light dark:text-dark py-3 px-6 shadow-dark cursor-pointer absolute lg:py-2 lg:px-5 md:text-sm"
           whileHover={{ scale: 1.05 }}
-          initial={{ x: 0, y: 0 }}
-          whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
+          initial={isMobile ? { x: x, y: y } : { x: 0, y: 0 }}
+          whileInView={
+            !isMobile && { x: x, y: y, transition: { duration: 1.5 } }
+          }
           viewport={{ once: true }}
           whileTap={{
             boxShadow: "1px 1px 15px rgba(0,0,0,0.2)",
@@ -190,13 +196,6 @@ const Skills = () => {
                 icon={<UiIcon />}
                 dragConstraints={constraints}
               />
-              {/* <Skill
-                name="Figma"
-                x="-20vw"
-                y="18vh"
-                icon={<FigmaIcon />}
-                dragConstraints={constraints}
-              /> */}
               <Skill
                 name="SQL"
                 x="-20vw"
