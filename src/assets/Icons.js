@@ -436,7 +436,7 @@ export const FirebaseIcon = ({ className, ...props }) => (
     height={64}
     viewBox="0 0 32 32"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-5 h-auto mr-2 -ml-2 ${className}`}
+    className={`w-5 h-auto mr-1 -ml-1 ${className}`}
     {...props}
   >
     <path
@@ -461,7 +461,7 @@ export const HtmlIcon = ({ className, ...props }) => (
     xmlSpace="preserve"
     viewBox="0 0 512 512"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-5 h-auto mr-2 -ml-2 ${className}`}
+    className={`w-5 h-auto mr-1 -ml-1 ${className}`}
     {...props}
   >
     <title>HTML5 Logo Badge</title>
@@ -484,7 +484,7 @@ export const CssIcon = ({ className, ...props }) => (
     xmlSpace="preserve"
     viewBox="0 0 32 32"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-6 h-auto mr-2 -ml-2 ${className}`}
+    className={`w-6 h-auto mr-1 -ml-1 ${className}`}
     {...props}
   >
     <title>{"file_type_css"}</title>
@@ -618,7 +618,7 @@ export const TailwindIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-7 h-auto mr-2 -ml-2 ${className}`}
+    className={`w-9 h-auto mr-2 -ml-1 ${className}`}
     {...props}
   >
     <path
@@ -638,7 +638,7 @@ export const FlutterIcon = ({ className, ...props }) => (
     height={2500}
     viewBox="0.29 0.22 77.26 95.75"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-4 h-auto mr-2 -ml-2 ${className}`}
+    className={`w-4 h-auto mr-1 -ml-1 my-1 ${className}`}
     {...props}
   >
     <g fill="none" fillRule="evenodd">
@@ -661,7 +661,7 @@ export const TsIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-5 h-full mr-2 -ml-2 ${className}`}
+    className={`w-5 h-full mr-2 -ml-1 ${className}`}
     {...props}
   >
     <rect fill="#3178c6" height="512" rx="50" width="512" />
@@ -680,7 +680,7 @@ export const ExpressIcon = ({ className, ...props }) => (
     width="1em"
     height="1em"
     viewBox="0 0 256 256"
-    className={`w-6 h-auto mr-2 -ml-1 border-[1px] border-dark/25 rounded-md ${className}`}
+    className={`w-5 h-auto mr-2 -ml-1 border-[1px] border-dark/25 rounded-md ${className}`}
     {...props}
   >
     <rect width={256} height={256} rx={60} fill="#f5f5f5" />
@@ -716,7 +716,7 @@ export const SqlIcon = ({ className, ...props }) => (
     viewBox="-8.78 0 70 70"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid meet"
-    className={`w-6 h-full -ml-2 mr-1 ${className}`}
+    className={`w-5 h-full -ml-2 mr-1 ${className}`}
     {...props}
   >
     <path

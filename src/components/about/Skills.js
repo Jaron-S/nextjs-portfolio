@@ -57,7 +57,7 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
       >
         <motion.div
           key={JSON.stringify(size)}
-          className="flex flex-center items-center justify-start rounded-full font-semibold bg-dark text-light dark:bg-light dark:text-dark py-3 px-6 shadow-dark cursor-pointer absolute lg:py-2 lg:px-5 md:text-sm sm:text-xs"
+          className="flex flex-center items-center justify-start rounded-full font-semibold bg-dark text-light dark:bg-light dark:text-dark shadow-dark cursor-pointer absolute py-3 px-5 sm:py-1 sm:px-3 lg:py-2 lg:px-4 md:text-sm sm:text-xs"
           whileHover={{ scale: 1.05 }}
           initial={{ x: 0, y: 0 }}
           whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
