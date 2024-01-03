@@ -102,8 +102,8 @@ const Skills = () => {
     const value = parseFloat(originalValue);
     const unit = originalValue.replace(value, "");
 
-    const minWidth = 320;
-    const maxWidth = 1200;
+    const minWidth = 0;
+    const maxWidth = 3200;
 
     // Clamp width to be within the defined range
     const clampedWidth = Math.min(Math.max(width, minWidth), maxWidth);
