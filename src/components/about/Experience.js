@@ -39,7 +39,7 @@ const Details = ({
           {time} | {address}
         </span>
         <p className="font-medium w-full py-2 sm:text-sm">{description}</p>
-        <ul className="list-inside space-y-2 text-small sm:text-xs py-2">
+        <ul className="list-inside space-y-2 text-small sm:text-xs py-4">
           {listItems.map((item, index) => (
             <li key={index}>
               <motion.div
