@@ -211,7 +211,7 @@ const Skills = () => {
               <Skill
                 name="Flutter"
                 x="3vw"
-                y={"30vw"}
+                y={adjustPosition("33vw")}
                 icon={<FlutterIcon />}
                 dragConstraints={constraints}
               />
