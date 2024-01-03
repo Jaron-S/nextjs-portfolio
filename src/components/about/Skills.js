@@ -1,5 +1,5 @@
 import { motion, useDragControls } from "framer-motion";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   CssIcon,
