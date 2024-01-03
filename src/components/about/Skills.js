@@ -1,4 +1,4 @@
-import { motion, useAnimation, useDragControls } from "framer-motion";
+import { motion, useDragControls } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import {
