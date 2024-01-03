@@ -23,10 +23,6 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
   const size = useWindowSize();
   const [constraints, setConstraints] = useState(null);
 
-  const isMobile = useMemo(() => {
-    return size.width < 550;
-  });
-
   const vwToPixel = (vw) => {
     return (parseFloat(vw) / 100) * window.innerWidth;
   };
@@ -63,10 +59,8 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
           key={JSON.stringify(size)}
           className="flex flex-center items-center justify-start rounded-full font-semibold bg-dark text-light dark:bg-light dark:text-dark py-3 px-6 shadow-dark cursor-pointer absolute lg:py-2 lg:px-5 md:text-sm"
           whileHover={{ scale: 1.05 }}
-          initial={isMobile ? { x: x, y: y } : { x: 0, y: 0 }}
-          whileInView={
-            !isMobile && { x: x, y: y, transition: { duration: 1.5 } }
-          }
+          initial={{ x: 0, y: 0 }}
+          whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
           viewport={{ once: true }}
           whileTap={{
             boxShadow: "1px 1px 15px rgba(0,0,0,0.2)",
@@ -104,6 +98,23 @@ const Skills = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [width]);
 
+  const adjustPosition = (originalValue) => {
+    const value = parseFloat(originalValue);
+    const unit = originalValue.replace(value, "");
+
+    const minWidth = 320;
+    const maxWidth = 1200;
+
+    // Clamp width to be within the defined range
+    const clampedWidth = Math.min(Math.max(width, minWidth), maxWidth);
+
+    // Linearly interpolate the factor based on the width
+    const factor =
+      0.5 + (clampedWidth - minWidth) * (1.5 / (maxWidth - minWidth));
+
+    return `${value * factor}${unit}`;
+  };
+
   return (
     <>
       <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
@@ -134,14 +145,14 @@ const Skills = () => {
               <Skill
                 name="HTML"
                 x="-35vw"
-                y="-8vh"
+                y={adjustPosition("-8vh")}
                 icon={<HtmlIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="CSS"
                 x="-10vw"
-                y="-15vh"
+                y={adjustPosition("-13vh")}
                 icon={<CssIcon />}
                 dragConstraints={constraints}
               />
@@ -149,70 +160,70 @@ const Skills = () => {
                 name="Javascript"
                 z
                 x="30vw"
-                y="10vh"
+                y={adjustPosition("10vh")}
                 icon={<JsIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="React"
                 x="8vw"
-                y="-35vh"
+                y={adjustPosition("-35vh")}
                 icon={<ReactIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="NextJS"
                 x="15vw"
-                y="18vh"
+                y={adjustPosition("18vh")}
                 icon={<NextJsIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="UI/UX Design"
                 x="-20vw"
-                y="-25vh"
+                y={adjustPosition("-25vh")}
                 icon={<UiIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="SQL"
                 x="-20vw"
-                y="18vh"
+                y={adjustPosition("18vh")}
                 icon={<SqlIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="Firebase"
                 x="18vw"
-                y="-27vh"
+                y={adjustPosition("-27vh")}
                 icon={<FirebaseIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="Tailwind CSS"
                 x="24vw"
-                y="-17vh"
+                y={adjustPosition("-17vh")}
                 icon={<TailwindIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="Flutter"
                 x="38vw"
-                y="-7vh"
+                y={adjustPosition("-7vh")}
                 icon={<FlutterIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="Typescript"
                 x="-25vw"
-                y="10vh"
+                y={adjustPosition("10vh")}
                 icon={<TsIcon />}
                 dragConstraints={constraints}
               />
               <Skill
                 name="Express"
                 x="-5vw"
-                y="26vh"
+                y={adjustPosition("26vh")}
                 icon={<ExpressIcon />}
                 dragConstraints={constraints}
               />
