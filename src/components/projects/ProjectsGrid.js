@@ -14,8 +14,8 @@ import {
   StripeIcon,
 } from "@/assets/Icons";
 import linkUpImage from "/public/images/projects/link-up.webp";
-import workoutBalancerImage from "/public/images/projects/workoutBalancer.png";
-import lifeOSImage from "/public/images/projects/lifeOS.png";
+import workoutBalancerImage from "/public/images/projects/workoutBalancer.webp";
+import lifeOSImage from "/public/images/projects/lifeOS.webp";
 import portfolioImage from "/public/images/projects/portfolio.webp";
 
 const ProjectsGrid = () => {
