@@ -89,6 +89,7 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
 const Skills = () => {
   const containerRef = useRef(null);
   const [constraints, setConstraints] = useState(null);
+  const { width } = useWindowSize();
 
   useEffect(() => {
     if (containerRef.current) {
@@ -100,31 +101,8 @@ const Skills = () => {
         bottom: boundingBox.height / 2 - 25,
       });
     }
-  }, []);
-
-  // reload page on resize, since animation breaks dragConstraints on resize
-  useEffect(() => {
-    // Store the initial width
-    const initialWidth = window.innerWidth;
-    let resizeTimeout;
-
-    const handleResize = () => {
-      // Check if the width has changed
-      if (window.innerWidth !== initialWidth) {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-          window.location.reload();
-        }, 100);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      clearTimeout(resizeTimeout);
-    };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [width]);
 
   return (
     <>
