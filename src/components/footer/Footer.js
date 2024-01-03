@@ -19,7 +19,7 @@ const GradientAnimation = (children) => {
           ease: "easeInOut",
         }}
         style={{
-          background: "linear-gradient(to right, #54c3cd 0%, #b2529b 100%)",
+          background: "linear-gradient(to right, #2cc6d7 0%, #b2529b 100%)",
           backgroundSize: "150% 100%",
           backgroundPositionX: "var(--gradientPos)",
           WebkitBackgroundClip: "text",
