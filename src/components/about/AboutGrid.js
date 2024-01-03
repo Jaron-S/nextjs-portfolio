@@ -11,17 +11,17 @@ const aboutMeParagraphs = [
   "If you're seeking a developer who consistently delivers quality, innovation and client satisfaction, let's discuss your next project. Feel free to ",
 ];
 
-const AboutGrid = () => {
+const AboutGrid = ({ setIsContactOpen }) => {
   return (
     <div className="grid w-full grid-cols-8 gap-16 justify-items-center sm:mb-8 sm:gap-8">
-      <AboutMe />
+      <AboutMe setIsContactOpen={setIsContactOpen} />
       <ProfilePicture />
       <Stats />
     </div>
   );
 };
 
-const AboutMe = () => {
+const AboutMe = ({ setIsContactOpen }) => {
   return (
     <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
       <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
@@ -37,9 +37,12 @@ const AboutMe = () => {
           {paragraph}
           {index === aboutMeParagraphs.length - 1 && (
             <>
-              <Link className="underline" href={"/contact"}>
+              <button
+                className="underline"
+                onClick={() => setIsContactOpen(true)}
+              >
                 contact me
-              </Link>
+              </button>
               <span>.</span>
             </>
           )}

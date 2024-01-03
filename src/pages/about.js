@@ -11,7 +11,7 @@ const pageTitle = "Jaron S | About Page";
 const pageDescription = "A description of the about page";
 const animatedTextContent = "Intuition Meets Innovation";
 
-const about = () => {
+const about = ({ setIsContactOpen }) => {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ const about = () => {
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-16 !mt-0 lg:pt-8">
           <AnimatedText text={animatedTextContent} className="my-16" />
-          <AboutGrid />
+          <AboutGrid setIsContactOpen={setIsContactOpen} />
           <Skills />
           <Experience />
           <Education />
