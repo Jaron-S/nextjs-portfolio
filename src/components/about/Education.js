@@ -77,12 +77,12 @@ const Education = () => {
               {
                 title: "Web Development",
                 description:
-                  "Covered the fundamentals of front-end and back-end development, including HTML, CSS, JavaScript, Express and MongoDB.",
+                  "Covered the fundamentals of front-end and back-end development, including HTML, CSS & the MERN stack.",
               },
               {
                 title: "Mobile development",
                 description:
-                  "Enhanced my full-stack skills by mastering mobile UI/UX and learning cross-platform development with Flutter.",
+                  "Enhanced my full-stack skills by mastering mobile UI/UX and learning cross-platform responsive development with Flutter.",
               },
               {
                 title: "Database Systems",
@@ -102,7 +102,7 @@ const Education = () => {
               {
                 title: "Capstone Project",
                 description:
-                  "Led a team in developing a production-grade, full-stack website, overseeing design and applying theory to practice throughout the process.",
+                  "Led a team in developing a production-grade, full-stack website using the MERN stack.",
               },
             ]}
           />
@@ -116,12 +116,12 @@ const Education = () => {
               {
                 title: "Statistics and Data Analysis",
                 description:
-                  "Provided me with a foundation for understanding data, which I now apply to web analytics and SEO.",
+                  "Provided me with a foundation for understanding data manipulation.",
               },
               {
                 title: "Bioinformatics",
                 description:
-                  "Introduced me to programming in a scientific context, including data manipulation and computational problem-solving.",
+                  "Introduced me to programming in a scientific context, from working with datasets to computational problem-solving.",
               },
             ]}
           />
