@@ -44,24 +44,6 @@ const Skill = ({ name, x, y, icon, dragConstraints }) => {
     });
   }, [x, y, dragConstraints, size]);
 
-  // reload page on resize, since animation breaks dragConstraints
-  useEffect(() => {
-    let resizeTimeout;
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        window.location.reload();
-      }, 100);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      clearTimeout(resizeTimeout);
-    };
-  }, []);
-
   return (
     constraints && (
       <motion.div
@@ -112,6 +94,30 @@ const Skills = () => {
         bottom: boundingBox.height / 2 - 25,
       });
     }
+  }, []);
+
+  // reload page on resize, since animation breaks dragConstraints on resize
+  useEffect(() => {
+    // Store the initial width
+    const initialWidth = window.innerWidth;
+    let resizeTimeout;
+
+    const handleResize = () => {
+      // Check if the width has changed
+      if (window.innerWidth !== initialWidth) {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          window.location.reload();
+        }, 100);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimeout);
+    };
   }, []);
 
   return (
