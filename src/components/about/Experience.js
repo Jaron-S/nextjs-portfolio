@@ -85,33 +85,35 @@ const Experience = () => {
             companyLink="www.neolite.ca"
             time="2023-Present"
             address="Calgary, AB"
-            description="As a co-founder and web developer at my own company, I've had the opportunity to wear multiple hats, ranging from project management to hands-on coding. Alongside a small but highly skilled team, I work on high-end, design-forward websites, custom web solutions, and web & mobile app development for a diverse clientele. My key contributions include:"
+            description={`As a co-founder and web developer at my own company, I've had the opportunity to wear multiple hats, 
+            ranging from project management to hands-on coding. Alongside a small but dedicated team, I work on performant websites, 
+            custom web solutions and web app development for a diverse clientele. 
+            My key contributions include:`}
             listItems={[
               {
                 title: "End-to-End Development",
                 description:
-                  "Involved in all aspects of creating responsive websites and web apps, ensuring each project evolves from a well-conceptualized idea to a fully functional product.",
+                  "Involved in every aspect of web development, from concept to fully functional product.",
               },
               {
                 title: "Collaborative Teamwork",
                 description:
-                  "Engage collaboratively with team members, each holding an equal share in the company, to ensure smooth execution and high-quality deliverables.",
+                  "Collaborating with team members to ensure smooth project execution and quality results.",
               },
-
               {
                 title: "Client Relations",
                 description:
-                  "Act as a client liaison to understand specific needs and provide bespoke solutions that exceed expectations.",
+                  "Serving as a client liaison, providing tailored solutions that meet and exceed expectations.",
               },
               {
                 title: "Technical Expertise",
                 description:
-                  "Utilize the latest in web development technologies and tools, guaranteeing modern, efficient, and visually appealing outcomes.",
+                  "Utilizing advanced web development tools for efficient, modern, and appealing solutions.",
               },
               {
                 title: "Business Strategy",
                 description:
-                  "Lead in shaping the company's future, from adopting new technologies to laying the groundwork for our expansion into mobile app development.",
+                  "Leading business strategy, focusing on technology adoption and mobile app development.",
               },
             ]}
           />
