@@ -5,7 +5,7 @@ import React from "react";
 import Head from "next/head";
 
 const pageTitle = "Jaron S | Contact Page";
-const pageDescription = "You can contact me here";
+const pageDescription = "You can contact me here.";
 const animatedTextContent = "Contact Me";
 
 const contact = () => {

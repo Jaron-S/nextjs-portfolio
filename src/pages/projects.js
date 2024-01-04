@@ -5,7 +5,7 @@ import AnimatedText from "@/components/global/AnimatedText";
 import ProjectsGrid from "@/components/projects/ProjectsGrid";
 
 const pageTitle = "Jaron S | Projects Page";
-const pageDescription = "any description";
+const pageDescription = "You can check out all my projects here.";
 const animatedText = "Turning Concept Into Code";
 
 const projects = () => {

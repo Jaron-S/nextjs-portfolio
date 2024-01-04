@@ -8,7 +8,7 @@ import Experience from "@/components/about/Experience";
 import Education from "@/components/about/Education";
 
 const pageTitle = "Jaron S | About Page";
-const pageDescription = "A description of the about page";
+const pageDescription = "Learn about my journey through web & mobile development.";
 const animatedTextContent = "Intuition Meets Innovation";
 
 const about = ({ setIsContactOpen }) => {
