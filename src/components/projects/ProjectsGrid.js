@@ -25,7 +25,7 @@ const ProjectsGrid = () => {
       <div className="col-span-12">
         <FeaturedProject
           title="Life Management Web App"
-          summary="This ever-evolving life & goal management app allows users to track their progress toward their ideal identity. PWA compatibility gives users the ability to download the web app for improved performance and offline mode."
+          summary="The early alpha of my custom life management & goal tracking app allows users to track their progress toward their ideal identity. PWA compatibility gives users the ability to download the web app for improved performance and offline mode."
           link="https://life-os.netlify.app/"
           type="Featured Project"
           tools={[
